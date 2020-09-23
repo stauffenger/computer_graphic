@@ -3,10 +3,13 @@ I'll use this repository to apply the skills learned on my CG classes in the UEZ
 <img src="https://raw.githubusercontent.com/stauffenger/computer_graphic/master/examples/chemex_coffeemaker_1.jpg" alt="Chemex Coffemaker draw 1" height="350" />
 <img src="https://raw.githubusercontent.com/stauffenger/computer_graphic/master/examples/chemex_coffeemaker_2.jpg" alt="Chemex Coffemaker draw 2" height="350" /><br />
 
-### How to compile a OpenGL GLUT program(with freeGlut):
+### How to run the program on Linux:
 ```Shell
-g++ main.cpp -o chemex.out -lglut -lGLU -lGL
+$ make
+$ make clean
+$ ./chemex.out
 ```
 
 #### references
 - http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/
+- http://www.math.uaa.alaska.edu/~afkjm/csce211/handouts/SeparateCompilation.pdf

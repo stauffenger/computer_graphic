@@ -1,25 +1,34 @@
 #include <GL/glut.h>
+#include "colors.h"
 
-void displayMe(void)
-{
+void setBackgroundRGBA(Color color) {
+    glClearColor(
+        color.red,
+        color.green,
+        color.blue,
+        color.alpha
+    );
     glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_POLYGON);
-        glVertex3f(0.5, 0.0, 0.5);
-        glVertex3f(0.5, 0.0, 0.0);
-        glVertex3f(0.0, 0.5, 0.0);
-        glVertex3f(0.0, 0.0, 0.5);
-    glEnd();
+}
+
+void createWindow() {
+    GLint width = 800, height = 600;
+    glutInitWindowSize(width, height);
+    glutCreateWindow("Chemex Coffeemaker");
+}
+
+void draw() {
+    Color backgroundColor(White);
+    setBackgroundRGBA(backgroundColor);
+
     glFlush();
 }
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE);
-    glutInitWindowSize(400, 300);
-    glutInitWindowPosition(100, 100);
-    glutCreateWindow("Hello world!");
-    glutDisplayFunc(displayMe);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
+    createWindow();
+    glutDisplayFunc(draw);
     glutMainLoop();
     return 0;
 }
