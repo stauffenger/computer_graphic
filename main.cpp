@@ -1,5 +1,5 @@
 #include <GL/glut.h>
-#include "colors.h"
+#include "./lib/colors.h"
 
 void setBackgroundRGBA(Color color) {
     glClearColor(
