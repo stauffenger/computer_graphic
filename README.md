@@ -10,6 +10,18 @@ $ make clean
 $ ./chemex.out
 ```
 
-#### references
+### How to install the project dependencies on Ubuntu:
+```Shell
+$ sudo apt update
+$ sudo apt install libglu1-mesa-dev freeglut3-dev mesa-common-dev make g++
+```
+
+#### dependencies:
+- OpenGL
+- GLUT
+- g++
+- make
+
+#### references:
 - http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/
 - http://www.math.uaa.alaska.edu/~afkjm/csce211/handouts/SeparateCompilation.pdf
