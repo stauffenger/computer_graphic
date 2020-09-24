@@ -25,7 +25,7 @@ void setBackgroundColor(ColorName targetColor) {
     setBackgroundRGBA(backgroundColor);
 }
 
-void setColor(ColorName targetColor) {
+void setDrawColor(ColorName targetColor) {
     Color drawColor(targetColor);
     setColorRGBA(drawColor);
 }
@@ -43,7 +43,7 @@ void drawTriangle() {
 
 void draw() {
     setBackgroundColor(White);
-    setColor(Black);
+    setDrawColor(Black);
     drawTriangle();
 
     glFlush();
