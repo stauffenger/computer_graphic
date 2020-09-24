@@ -25,3 +25,32 @@ void Color::changeColor(ColorName color) {
             break;
     }
 }
+
+void setBackgroundRGBA(Color color) {
+    glClearColor(
+        color.red,
+        color.green,
+        color.blue,
+        color.alpha
+    );
+    glClear(GL_COLOR_BUFFER_BIT);
+}
+
+void setColorRGBA(Color color) {
+    glColor4f(
+        color.red,
+        color.green,
+        color.blue,
+        color.alpha
+    );
+}
+
+void setBackgroundColor(ColorName targetColor) {
+    Color backgroundColor(targetColor);
+    setBackgroundRGBA(backgroundColor);
+}
+
+void setDrawColor(ColorName targetColor) {
+    Color drawColor(targetColor);
+    setColorRGBA(drawColor);
+}

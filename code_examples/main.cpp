@@ -1,18 +1,9 @@
 #include <GL/glut.h>
-#include "./lib/colors.h"
-
-void drawTriangle() {
-    glBegin(GL_TRIANGLES);
-        glVertex3f(-0.9, -0.9, 0.0);
-        glVertex3f(0.9, 0.9, 0.0);
-        glVertex3f(0.9, -0.9, 0.0);
-    glEnd();
-}
+#include "../lib/colors.h"
 
 void draw() {
     setBackgroundColor(White);
     setDrawColor(Black);
-    drawTriangle();
 
     glFlush();
 }
@@ -20,7 +11,7 @@ void draw() {
 void createWindow() {
     GLint width = 800, height = 600;
     glutInitWindowSize(width, height);
-    glutCreateWindow("Chemex Coffeemaker");
+    glutCreateWindow("Code Examples");
 }
 
 int main(int argc, char** argv) {

@@ -9,4 +9,9 @@ class Color {
         Color(ColorName color);
         void changeColor(ColorName color);
 };
+
+void setBackgroundRGBA(Color color);
+void setColorRGBA(Color color);
+void setBackgroundColor(ColorName targetColor);
+void setDrawColor(ColorName targetColor);
 #endif
