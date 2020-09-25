@@ -2,7 +2,7 @@ CFLAGS = -g -Wall -O
 LIBS_PATH = ../lib/
 LIBS = -lGL -lGLU -lglut 
 CC = g++
-SRC = main.cpp $(LIBS_PATH)colors.cpp
+SRC = main.cpp $(LIBS_PATH)colors.cpp drawSimpleShapes.cpp
 OBJ = $(SRC:.cpp=.o)
 
 default: examples

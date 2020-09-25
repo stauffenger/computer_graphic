@@ -16,12 +16,17 @@ $ sudo apt update
 $ sudo apt install libglu1-mesa-dev freeglut3-dev mesa-common-dev make g++
 ```
 
-#### dependencies:
+#### Dependencies:
 - OpenGL
 - GLUT
 - g++
 - make
 
-#### references:
+#### References:
 - http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/
 - http://www.math.uaa.alaska.edu/~afkjm/csce211/handouts/SeparateCompilation.pdf
+
+#### Future consult
+- https://web.archive.org/web/20190226103837/http://nehe.gamedev.net/tutorial/freetype_fonts_in_opengl/24001/
+- https://learnopengl.com/index.php?p=In-Practice/Text-Rendering
+- https://github.com/rougier/freetype-gl

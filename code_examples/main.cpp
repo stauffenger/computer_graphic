@@ -1,11 +1,34 @@
 #include <GL/glut.h>
 #include "../lib/colors.h"
+#include "drawSimpleShapes.h"
 
-void draw() {
-    setBackgroundColor(White);
-    setDrawColor(Black);
-
+void draw(GLubyte key, GLint x, GLint y)
+{
+    switch(key)
+    {
+        case '1':
+            setBackgroundColor(White);
+            setDrawColor(Black);
+            glutDisplayFunc(drawTriangle);
+        break;
+        case '2':
+            setBackgroundColor(White);
+            setDrawColor(Gray);
+            glutDisplayFunc(drawSquare);
+        break;
+        case '3':
+            setBackgroundColor(White);
+            setDrawColor(Black);
+            glutDisplayFunc(drawRhombus);
+            break;
+        case '4':
+            setBackgroundColor(White);
+            setDrawColor(Gray);
+            glutDisplayFunc(drawCircle);
+            break;
+    }
     glFlush();
+    glutPostRedisplay();
 }
 
 void createWindow() {
@@ -18,7 +41,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
     createWindow();
-    glutDisplayFunc(draw);
+    glutKeyboardFunc(draw);
     glutMainLoop();
     return 0;
 }
