@@ -20,12 +20,15 @@ void draw(GLubyte key, GLint x, GLint y)
             setBackgroundColor(White);
             setDrawColor(Black);
             glutDisplayFunc(drawRhombus);
-            break;
+        break;
         case '4':
             setBackgroundColor(White);
             setDrawColor(Gray);
             glutDisplayFunc(drawCircle);
-            break;
+        break;
+        case 'q':
+            exit(0);
+        break;
     }
     glFlush();
     glutPostRedisplay();
