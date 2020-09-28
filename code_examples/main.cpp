@@ -8,19 +8,19 @@ void draw(GLubyte key, GLint x, GLint y)
     switch(key)
     {
         case '1':
-            setDrawColor(Black);
+            setDrawColor(Blue);
             glutDisplayFunc(drawTriangle);
         break;
         case '2':
-            setDrawColor(Gray);
+            setDrawColor(Purple);
             glutDisplayFunc(drawSquare);
         break;
         case '3':
-            setDrawColor(Black);
+            setDrawColor(Green);
             glutDisplayFunc(drawRhombus);
         break;
         case '4':
-            setDrawColor(Gray);
+            setDrawColor(Red);
             glutDisplayFunc(drawCircle);
         break;
         case 'q':
