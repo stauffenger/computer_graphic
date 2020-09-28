@@ -10,6 +10,13 @@ $ make clean
 $ ./chemex.out
 ```
 
+### How to run the examples on Linux:
+```Shell
+$ make examples
+$ make clean
+$ ./examples.out
+```
+
 ### How to install the project dependencies on Ubuntu:
 ```Shell
 $ sudo apt update
