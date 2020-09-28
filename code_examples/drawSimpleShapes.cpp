@@ -13,6 +13,7 @@ void drawTriangle() {
         glVertex2f(MAXIMUM, MAXIMUM);
         glVertex2f(MAXIMUM, MINIMUM);
     glEnd();
+    glFinish();
 }
 
 void calculateWidthAndHeightProportion(GLfloat *widthProportion, GLfloat *heightProportion) {
@@ -35,6 +36,7 @@ void drawSquare() {
         glVertex2f(MAXIMUM * widthProportion, MAXIMUM * heightProportion);
         glVertex2f(MAXIMUM * widthProportion, MINIMUM * heightProportion);
     glEnd();
+    glFinish();
 }
 
 void drawRhombus() {
@@ -44,6 +46,7 @@ void drawRhombus() {
         glVertex2f(MAXIMUM, MIDDLE);
         glVertex2f(MIDDLE, MINIMUM);
     glEnd();
+    glFinish();
 }
 
 void calculateCurrentPointsXYUsingAngle(GLfloat *x, GLfloat *y, GLfloat angle) {
@@ -73,4 +76,5 @@ void drawCircle() {
             glVertex2f(x, y);
         }
     glEnd();
+    glFinish();
 }

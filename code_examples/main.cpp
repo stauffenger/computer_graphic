@@ -4,25 +4,22 @@
 
 void draw(GLubyte key, GLint x, GLint y)
 {
+    setBackgroundColor(White);
     switch(key)
     {
         case '1':
-            setBackgroundColor(White);
             setDrawColor(Black);
             glutDisplayFunc(drawTriangle);
         break;
         case '2':
-            setBackgroundColor(White);
             setDrawColor(Gray);
             glutDisplayFunc(drawSquare);
         break;
         case '3':
-            setBackgroundColor(White);
             setDrawColor(Black);
             glutDisplayFunc(drawRhombus);
         break;
         case '4':
-            setBackgroundColor(White);
             setDrawColor(Gray);
             glutDisplayFunc(drawCircle);
         break;
@@ -38,6 +35,7 @@ void createWindow() {
     GLint width = 800, height = 600;
     glutInitWindowSize(width, height);
     glutCreateWindow("Code Examples");
+    setBackgroundColor(White);
 }
 
 int main(int argc, char** argv) {

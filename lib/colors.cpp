@@ -34,6 +34,7 @@ void setBackgroundRGBA(Color color) {
         color.alpha
     );
     glClear(GL_COLOR_BUFFER_BIT);
+    glFinish();
 }
 
 void setColorRGBA(Color color) {
@@ -43,6 +44,7 @@ void setColorRGBA(Color color) {
         color.blue,
         color.alpha
     );
+    glFinish();
 }
 
 void setBackgroundColor(ColorName targetColor) {
