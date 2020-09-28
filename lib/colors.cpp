@@ -6,23 +6,60 @@ Color::Color(ColorName color) {
 
 void Color::changeColor(ColorName color) {
     switch (color) {
-        case White:
-            red = green = blue = 0.98;
-            alpha = 1;
-            break;
         case Black:
-            red = green = blue = 0;
-            alpha = 1;
-            break;
+            red = 0.0;
+            green = 0.0;
+            blue = 0.0;
+            alpha = 1.0;
+        break;
+        case Blue:
+            red = 0.0;
+            green = 0.0;
+            blue = 0.8;
+            alpha = 1.0;
+        break;
         case Gray:
-            red = green = blue = 0.5;
-            alpha = 1;
-            break;
-        default:
+            red = 0.5;
+            green = 0.5;
+            blue = 0.5;
+            alpha = 1.0;
+        break;
+        case Green:
+            red = 0.0;
+            green = 0.8;
+            blue = 0.0;
+            alpha = 1.0;
+        break;
+        case Pink:
             red = 1;
-            green = blue = 0;
-            alpha = 1;
-            break;
+            green = 0.0;
+            blue = 0.49;
+            alpha = 1.0;
+        break;
+        case Purple:
+            red = 0.4;
+            green = 0.0;
+            blue = 0.4;
+            alpha = 1.0;
+        break;
+        case Red:
+            red = 0.8;
+            green = 0.0;
+            blue = 0.0;
+            alpha = 1.0;
+        break;
+        case White:
+            red = 0.98;
+            green = 0.98;
+            blue = 0.98;
+            alpha = 1.0;
+        break;
+        default:
+            red = 1.0;
+            green = 0.0;
+            blue = 0.0;
+            alpha = 1.0;
+        break;
     }
 }
 

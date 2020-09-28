@@ -1,7 +1,16 @@
 #include <GL/glut.h>
 #ifndef COLORS_H
 #define COLORS_H
-enum ColorName { White, Black, Gray };
+enum ColorName {
+    Black,
+    Blue,
+    Gray,
+    Green,
+    Purple,
+    Pink,
+    Red,
+    White
+};
 
 class Color {
     public:
