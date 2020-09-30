@@ -17,13 +17,13 @@ void drawTriangle() {
 }
 
 void calculateWidthAndHeightProportion(GLfloat *widthProportion, GLfloat *heightProportion) {
-    GLfloat screenHeight = GLfloat(glutGet(GLUT_WINDOW_HEIGHT));
-    GLfloat screenWidth = GLfloat(glutGet(GLUT_WINDOW_WIDTH));
+    GLfloat height = GLfloat(glutGet(GLUT_WINDOW_HEIGHT));
+    GLfloat width = GLfloat(glutGet(GLUT_WINDOW_WIDTH));
     *widthProportion = *heightProportion = 1;
-    if(screenHeight < screenWidth) {
-        *widthProportion = screenHeight / screenWidth;
-    } else if(screenWidth < screenHeight) {
-        *heightProportion = screenWidth / screenHeight;
+    if(height < width) {
+        *widthProportion = height / width;
+    } else if(width < height) {
+        *heightProportion = width / height;
     }
 }
 
@@ -50,20 +50,20 @@ void drawRhombus() {
 }
 
 void calculateCurrentPointsXYUsingAngle(GLfloat *x, GLfloat *y, GLfloat angle) {
-    GLfloat screenHeight = GLfloat(glutGet(GLUT_WINDOW_HEIGHT));
-    GLfloat screenWidth = GLfloat(glutGet(GLUT_WINDOW_WIDTH));
-    GLfloat screenProportion;
-    if (screenHeight == screenWidth) {
+    GLfloat height = GLfloat(glutGet(GLUT_WINDOW_HEIGHT));
+    GLfloat width = GLfloat(glutGet(GLUT_WINDOW_WIDTH));
+    GLfloat windowProportion;
+    if (height == width) {
         *x = RADIUS * cosf(angle);
         *y = RADIUS * sinf(angle);
-    } else if(screenHeight < screenWidth) {
-        screenProportion = screenHeight / screenWidth;
-        *x = RADIUS * screenProportion * cosf(angle);
+    } else if(height < width) {
+        windowProportion = height / width;
+        *x = RADIUS * windowProportion * cosf(angle);
         *y = RADIUS * sinf(angle);
     } else {
-        screenProportion = screenWidth / screenHeight;
+        windowProportion = width / height;
         *x = RADIUS * cosf(angle);
-        *y = RADIUS * screenProportion * sinf(angle);
+        *y = RADIUS * windowProportion * sinf(angle);
     }
 }
 
