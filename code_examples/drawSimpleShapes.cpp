@@ -2,9 +2,10 @@
 #include "drawSimpleShapes.h"
 #include <math.h>
 #define MAXIMUM 1.80
-#define MIDDLE 0.0
 #define MINIMUM -1.80
-#define MAXIMUM_RADIUS 0.9
+#define MIDDLE 0.0
+#define MAXIMUM_RADIUS 0.90
+#define MINIMUM_RADIUS -0.90
 #define TOTAL_SEGMENTS 360.0
 
 void toLimitValue(GLfloat *value) {
@@ -103,6 +104,8 @@ void calculateCurrentPointsXYUsingAngle(GLfloat *x, GLfloat *y, GLfloat angle) {
 void toLimitRadius(GLfloat *radius) {
     if (*radius > MAXIMUM_RADIUS) {
         *radius = MAXIMUM_RADIUS;
+    } else if(*radius < MINIMUM_RADIUS) {
+        *radius = MINIMUM_RADIUS;
     }
 }
 

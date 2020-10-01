@@ -3,38 +3,40 @@
 #include "drawSimpleShapes.h"
 
 void brazilFlag() {
-    GLfloat rectangleWidth = 1.8, rectangleHeight = 1.8;
-    GLfloat rhombusWidth = 1.6, rhombusHeight = 1.6;
-    GLfloat radius = 0.6;
     setDrawColor(Green);
+    GLfloat rectangleWidth = 1.8, rectangleHeight = 1.8;
     drawRectangle(rectangleWidth, rectangleHeight);
+    
     setDrawColor(Yellow);
+    GLfloat rhombusWidth = 1.6, rhombusHeight = 1.6;
     drawRhombus(rhombusWidth, rhombusHeight);
+    
     setDrawColor(Blue);
+    GLfloat radius = 0.55;
     drawCircle(radius);
 }
 
 void triangle() {
-    GLfloat base = 1.8, height = 0.9;
     setDrawColor(Blue);
+    GLfloat base = 1.8, height = 0.9;
     drawTriangle(base, height);
 }
 
 void square() {
-    GLfloat side = 1.8;
     setDrawColor(Purple);
+    GLfloat side = 1.8;
     drawSquare(side);
 }
 
 void rhombus() {
-    GLfloat width = 1.8, height = 1.8;
     setDrawColor(Green);
+    GLfloat width = 1.8, height = 1.8;
     drawRhombus(width, height);
 }
 
 void circle() {
-    GLfloat radius = 0.8;
     setDrawColor(Red);
+    GLfloat radius = 0.8;
     drawCircle(radius);
 }
 
