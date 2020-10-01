@@ -9,7 +9,8 @@ enum ColorName {
     Purple,
     Pink,
     Red,
-    White
+    White,
+    Yellow
 };
 
 class Color {

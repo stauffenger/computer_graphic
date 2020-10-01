@@ -54,6 +54,12 @@ void Color::changeColor(ColorName color) {
             blue = 0.98;
             alpha = 1.0;
         break;
+        case Yellow:
+            red = 1.0;
+            green = 1.0;
+            blue = 0.0;
+            alpha = 1.0;
+        break;
         default:
             red = 1.0;
             green = 0.0;
